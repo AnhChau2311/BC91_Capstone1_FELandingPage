@@ -1,0 +1,232 @@
+:root {
+    --accent-start: #ff7a68;
+    --accent-end: #ffbf5a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #fafafa;
+    color: #222;
+    overflow-x: hidden;
+}
+
+/* ==================== HEADER ==================== */
+.site-header {
+    padding: 1.25rem 0;
+    background: transparent;
+    position: relative;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.site-header.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 22px rgba(0, 0, 0, 0.06);
+    backdrop-filter: blur(6px);
+    padding: 0.65rem 0;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #111;
+    text-decoration: none;
+}
+
+.logo-icon {
+    width: 145px;
+    height: auto;
+}
+
+/* ==================== NAVIGATION ==================== */
+.navbar-nav {
+    gap: 0.5rem;
+}
+
+.navbar-nav .nav-link {
+    position: relative;
+    padding: 0.35rem 0.8rem;
+    font-weight: 500;
+    color: #2b2b2b;
+    transition: color 0.25s ease;
+    text-decoration: none;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--accent-start);
+}
+
+.navbar-nav .nav-link::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -6px;
+    transform: translateX(-50%);
+    width: 0;
+    height: 3px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, var(--accent-start), var(--accent-end));
+    transition: width 0.25s ease;
+}
+
+.navbar-nav .nav-link:hover::after,
+.navbar-nav .nav-link.active::after {
+    width: 36px;
+}
+
+/* Dropdown */
+.dropdown-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.dropdown-toggle::after {
+    display: none;
+}
+
+.custom-caret {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #111;
+    transform: translateY(1px);
+    transition: transform 0.2s ease;
+}
+
+.dropdown:hover .custom-caret {
+    transform: translateY(1px) rotate(180deg);
+}
+
+.dropdown-menu {
+    border: none;
+    border-radius: 12px;
+    padding: 0.6rem 0;
+    min-width: 220px;
+    box-shadow: 0 10px 30px rgba(20, 20, 30, 0.08);
+    margin-top: 0.5rem;
+}
+
+.dropdown-item {
+    padding: 0.6rem 1.2rem;
+    font-weight: 500;
+    color: #222;
+    transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background: #f8f9fa;
+    color: var(--accent-start);
+}
+
+@media (min-width: 992px) {
+    .dropdown-menu {
+        display: block;
+        opacity: 0;
+        transform: translateY(12px);
+        pointer-events: none;
+        transition: all 0.2s ease;
+    }
+
+    .dropdown:hover .dropdown-menu {
+        opacity: 1;
+        transform: translateY(0);
+        pointer-events: auto;
+    }
+}
+
+/* CTA Button */
+.signup-btn {
+    padding: 0.65rem 1.75rem;
+    border-radius: 50px;
+    font-weight: 600;
+    background: #fff;
+    color: #222;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.06);
+    transition: all 0.25s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.signup-btn:hover {
+    background: #f9f9f9;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    color: #222;
+}
+
+/* ==================== MOBILE MENU ==================== */
+.offcanvas {
+    max-width: 100%;
+}
+
+.brand-text {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111;
+}
+
+.mobile-item {
+    padding: 1.25rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.mobile-item a {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #111;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.mobile-item a:hover {
+    color: var(--accent-start);
+}
+
+.pages-toggle {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: #111;
+    background: none;
+    border: none;
+    padding: 0;
+}
+
+.pages-toggle .chev {
+    transition: transform 0.2s ease;
+}
+
+.pages-toggle[aria-expanded="true"] .chev {
+    transform: rotate(180deg);
+}
+
+.mobile-sub {
+    padding-left: 1rem;
+}
+
+.mobile-sub li {
+    padding: 0.75rem 0;
+}
+
+.mobile-sub a {
+    font-size: 1rem;
+    color: #444;
+}
+
+.page-gradient{
+   background-image: linear-gradient(184.78deg, #fa709a 7.64%, #fee140 120.07%);
+    border-bottom-left-radius: 80px;
+    border-bottom-right-radius: 80px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 60px;
+}

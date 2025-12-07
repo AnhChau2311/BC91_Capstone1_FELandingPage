@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>features</title>
+
+   <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&display=swap" rel="stylesheet" />
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <!--css-->
+    <link rel="stylesheet" href="/BC91_Capstone1_FELandingPage/assets/css/features.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light p-0 align-items-center" aria-label="Main navigation">
+                <!-- Logo left -->
+                <a class="navbar-brand d-flex align-items-center me-0 me-lg-4" href="#">
+                    <img src="assets/img/logo.svg" alt="Pinwheel Logo" class="logo-icon">
+                </a>
+
+                <!-- Desktop nav (centered) + Toggler visible on md and below -->
+                <button class="navbar-toggler order-lg-3 ms-auto" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-center order-lg-2" id="desktopNav">
+                    <ul class="navbar-nav align-items-center gap-3">
+                         <li class="nav-item"><a class="nav-link active" href="/BC91_Capstone1_FELandingPage/index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/BC91_Capstone1_FELandingPage/about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/BC91_Capstone1_FELandingPage/blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/BC91_Capstone1_FELandingPage/features.html">Features</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/BC91_Capstone1_FELandingPage/Howitwork.html">How It Works</a></li>
+
+                        <!-- Pages dropdown (desktop hover) -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="pagesDropdown"
+                                role="button" data-bs-toggle="dropdown">
+                                Pages
+                                <span class="custom-caret"></span>
+                            </a>
+                            <ul class="dropdown-menu shadow-sm" aria-labelledby="pagesDropdown">
+                                <li><a class="dropdown-item" href="#">Career</a></li>
+                                <li><a class="dropdown-item" href="#">Career Single</a></li>
+                                <li><a class="dropdown-item" href="#">Integrations</a></li>
+                                <li><a class="dropdown-item" href="#">Integration Single</a></li>
+                                <li><a class="dropdown-item" href="#">Pricing</a></li>
+                                <li><a class="dropdown-item" href="#">Changelogs</a></li>
+                                <li><a class="dropdown-item" href="#">Terms &amp; Conditions</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- CTA / Sign Up right -->
+                <div class="header-cta d-none d-lg-flex ms-auto order-lg-4">
+                    <a class="btn btn-cta btn-lg signup-btn" href="#">Sign Up Now</a>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Offcanvas mobile menu -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+            <div class="offcanvas-header border-0">
+                <a class="d-flex align-items-center" href="#">
+                    <img src="assets/img/icons/feature-shape.svg" alt="logo" style="width:34px;height:34px;">
+                    <span class="ms-2 fw-bold brand-text">Pinwheel</span>
+                </a>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body pt-0">
+                <nav class="mobile-nav">
+                    <ul class="list-unstyled">
+                        <li class="mobile-item"><a href="#" class="d-block">Home</a></li>
+                        <li class="mobile-item"><a href="#" class="d-block">About</a></li>
+                        <li class="mobile-item"><a href="#" class="d-block">Blog</a></li>
+                        <li class="mobile-item"><a href="#" class="d-block">Features</a></li>
+                        <li class="mobile-item"><a href="#" class="d-block">How It Works</a></li>
+
+                        <!-- Expandable Pages section -->
+                        <li class="mobile-item">
+                            <button
+                                class="btn w-100 text-start pages-toggle d-flex justify-content-between align-items-center"
+                                data-bs-toggle="collapse" data-bs-target="#mobilePages" aria-expanded="false">
+                                Pages
+                                <span class="chev">▾</span>
+                            </button>
+                            <div class="collapse mt-3" id="mobilePages">
+                                <ul class="list-unstyled mobile-sub ps-3">
+                                    <li><a href="#" class="d-block">Career</a></li>
+                                    <li><a href="#" class="d-block">Career Single</a></li>
+                                    <li><a href="#" class="d-block">Integrations</a></li>
+                                    <li><a href="#" class="d-block">Integration Single</a></li>
+                                    <li><a href="#" class="d-block">Pricing</a></li>
+                                    <li><a href="#" class="d-block">Changelogs</a></li>
+                                    <li><a href="#" class="d-block">Terms &amp; Conditions</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link" href="/BC91_Capstone1_FELandingPage/contact.html">Contact</a></li>
+                    </ul>
+
+                    <div class="mt-4 text-center">
+                        <a class="btn btn-cta w-75" href="#">Sign Up Now</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="carousel py-4">
+        <div class="container">
+            <!-- breadcrumb -->
+            <div>
+                <ul
+                    class="breadcrumb bg-body-secondary px-4 py-2 rounded-pill d-inline-flex flex-nowrap align-items-center gap-2">
+                    <li class="leading-none text-dark">
+                        <a class="inline-flex items-center  text-decoration-none" href="#">
+                            <i class="fa-solid fa-house text-dark"></i>
+                            <span class="text-sm leading-none text-warning ">Home</span>
+                        </a>
+                    </li>
+                    <li class="leading-none text-dark">
+                        <span class="text-sm leading-none">/ Contact</span>
+                    </li>
+                </ul>
+            </div>
+            <!-- content -->
+            <div class="row align-items-center">
+
+                <!-- LEFT -->
+                <div class="col-lg-6 mb-4">
+                    <h1 class="fw-bold display-5">
+                        Connects with all your other tools to create a smooth experience.
+                    </h1>
+
+                    <p class="text-secondary mt-3">
+                        Donec sollicitudin molestie malesuada. Donec sollicitudin molestie malesuada.
+                        Mauris pellentesque nec, egestas non nisi.
+                    </p>
+
+                    <a href="#" class=" page-gradient btn btn-light text-white btn-lg rounded-pill px-4 py-2 shadow">
+                        Download The Theme
+                    </a>
+                </div>
+
+                <!-- RIGHT -->
+                <div class="col-lg-6 text-center">
+                    <img src="/BC91_Capstone1_FELandingPage//assets/img/features-banner-img.png" class="img-fluid" style="max-width: 350px;" alt="carousel">
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <section class="collaborative text-center mt-5 mx-auto" style="width: 700px;">
+        <h1 class="fw-bold display-5">Build collaborative workspaces for your team</h1>
+        <p class="text-secondary mt-3">Donec sollicitudin molestie malesda. Donec sollitudin molestie malesuada.Mauris
+            pellentesque nec, egestas non
+            nisi. Cras ultricies .</p>
+    </section>
+
+    <section class="container my-5 p-4 rounded-4 shadow-sm" style="background: #fff;">
+        <section class="row g-4">
+            <!-- LEFT SIDE -->
+            <div class="col-lg-6">
+                <h4 class="fs-5 mx-5">Project Management</h4>
+                <div class="row g-3">
+                    <!-- CARD USER -->
+                    <div class="col-6">
+                        <div class="card border-0 shadow-sm p-3 rounded-4 text-center">
+                            <img src="/BC91_Capstone1_FELandingPage/assets/img/avatar-1.png" class="rounded-circle mx-auto mb-3" width="80">
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="card border-0 shadow-sm p-3 rounded-4 text-center">
+                            <img src="/BC91_Capstone1_FELandingPage/assets/img/avatar-2.png" class="rounded-circle mx-auto mb-3" width="80">
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="card border-0 shadow-sm p-3 rounded-4 text-center">
+                            <img src="/BC91_Capstone1_FELandingPage/assets/img/avatar-3.png" class="rounded-circle mx-auto mb-3" width="80">
+                        </div>
+                    </div>
+
+                    <div class="col-6">
+                        <div class="card border-0 shadow-sm p-3 rounded-4 text-center">
+                            <img src="/BC91_Capstone1_FELandingPage/assets/img/avatar-4.png" class="rounded-circle mx-auto mb-3" width="80">
+                        </div>
+                    </div>
+
+                </div>
+                <!-- BUTTON -->
+                <div class="text-center mt-4">
+                    <a href="#" class="btn btn-light w-75 text-white fw-bold px-5 py-3 rounded-pill"
+                        style="background: linear-gradient(184.78deg, #fa709a 7.64%, #fee140 120.07%);">
+                        View All Tasks
+                    </a>
+                </div>
+            </div>
+
+            <!-- RIGHT SIDE -->
+            <div class="col-lg-6">
+
+                <div class="card border-0 shadow-sm p-4 rounded-4 mb-3">
+                    <div class="d-flex align-items-start">
+                        <div class="p-3 rounded-4 me-3" style="background:#ffeeee;">
+                            <i class="fa-solid fa-display fs-4 " style="color: #fa709a;"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold">Boost engagement</h5>
+                            <p class="text-secondary mb-0">
+                                Encourage frequent & timely recognition integrating with communication tools
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card border-0 shadow-sm p-4 rounded-4 mb-3">
+                    <div class="d-flex align-items-start">
+                        <div class="p-3 rounded-4 me-3" style="background:#ffeeee;">
+                            <i class="fa-solid fa-lock fs-4 " style="color: #fa709a;"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold">Reduce friction</h5>
+                            <p class="text-secondary mb-0">
+                                Encourage frequent & timely recognition integrating with communication tools
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card border-0 shadow-sm p-4 rounded-4 mb-3">
+                    <div class="d-flex align-items-start">
+                        <div class="p-3 rounded-4 me-3" style="background:#ffeeee;">
+                            <i class="fa-solid fa-magnet fs-4 " style="color: #fa709a;"></i>
+                        </div>
+                        <div>
+                            <h5 class="fw-bold">Reduce friction</h5>
+                            <p class="text-secondary mb-0">
+                                Encourage frequent & timely recognition integrating with communication tools
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="payments">
+            <div class="container">
+                <div class="row align-items-center gx-5 mt-5">
+                    <!-- LEFT -->
+                    <div class="col-lg-5 ">
+                        <h1 class="fw-bold mb-4 fs-2">
+                            Accept payments from devices any country in this universe
+                        </h1>
+                        <ul class="list-unstyled">
+                            <li class="mb-3 d-flex align-items-start">
+                                <img src="/BC91_Capstone1_FELandingPage/assets/img/checkmark-circle.svg" class="me-2 mt-1" width="24">
+                                Supporting more than 119 country world
+                            </li>
+
+                            <li class="mb-3 d-flex align-items-start">
+                                <img src="/BC91_Capstone1_FELandingPage/assets/img/checkmark-circle.svg" class="me-2 mt-1" width="24">
+                                Open transaction with more than currencies
+                            </li>
+
+                            <li class="mb-3 d-flex align-items-start">
+                                <img src="/BC91_Capstone1_FELandingPage/assets/img/checkmark-circle.svg" class="me-2 mt-1" width="24">
+                                Customer Service with 79 languages
+                            </li>
+                        </ul>
+                        <div class="button"></div>
+                        <a href="#"
+                            class=" page-gradient btn btn-light text-white btn-lg rounded-pill my-3 px-4 py-2 shadow">
+                            Download The Theme
+                        </a>
+                        <a href="#"
+                            class=" page-learnmore btn btn-light text-black btn-lg rounded-pill my-3 px-4 py-2 shadow">
+                            Learn more
+                        </a>
+                    </div>
+                    <!-- RIGHT -->
+                    <div class="col-lg-7">
+                        <img class="" src="/BC91_Capstone1_FELandingPage/assets/img/feature-img-1.png" alt="market">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container d-flex align-items-center">
+                <div class="row align-items-center gx-5 mt-5">
+                    <div class="col-md-6">
+                        <img src="/BC91_Capstone1_FELandingPage/assets/img/feature-img-2.png" alt="feature2">
+                    </div>
+                </div>
+                <div class="col-md-6" style="width: 500px;">
+                    <h2>Transaction from Anyone with a world to Anywhere</h2>
+                    <p class="text-secondary my-1">Donec sollicitudin molestie malesda. Donec sollitudin molestie malesuada. Mauris pellentesque nec, egestas non nisi. Cras ultricies ligula sed</p>
+                    <h2 class="text-secondary my-3">Integrate Checkout with Process Smoothly</h2>
+                    <h2 class="text-secondary my-3">Transaction Safely process and Securely</h2>
+                </div>
+            </div>
+        </section>
+
+        <section class="helping my-5 py-4">
+        <div class="container page-gradient  bg-dark">
+            <div class="row justify-content-center gx-5">
+
+                <!-- LEFT -->
+                <div class="col-md-6 ">
+                    <h1 class="text-white fw-bold mb-4 display-5">
+                        Helping teams in the world with focus
+                    </h1>
+
+                    <a href="#" class="btn btn-light btn-lg rounded-pill px-4 py-2 shadow">
+                        Download The Theme
+                    </a>
+                </div>
+
+                <!-- RIGHT -->
+                <div class="col-md-6 ">
+                    <p class="text-white w-75">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Morbi egestas Verat viverra id et aliquet,
+                        vulputate egestas sollicitudin.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="row gy-4 my-5">
+                <div class="col-md-4">
+                    <h5 class="fw-bold">Pinwheel</h5>
+                    <p class="text-muted small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+
+                <div class="col-md-4">
+                    <h6>Quick Links</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-muted">About</a></li>
+                        <li><a href="#" class="text-muted">Category</a></li>
+                        <li><a href="#" class="text-muted">Testimonial</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <h6>Contact</h6>
+                    <p class="text-muted small">1234 Example Ave, City, Country</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+
+     <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&display=swap" rel="stylesheet" />
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <!--css-->
+    <link rel="stylesheet" href="/BC91_Capstone1_FELandingPage/assets/css/contact.css">
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light p-0 align-items-center" aria-label="Main navigation">
+                <!-- Logo left -->
+                <a class="navbar-brand d-flex align-items-center me-0 me-lg-4" href="#">
+                    <img src="assets/img/logo.svg" alt="Pinwheel Logo" class="logo-icon">
+                </a>
+
+                <!-- Desktop nav (centered) + Toggler visible on md and below -->
+                <button class="navbar-toggler order-lg-3 ms-auto" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-center order-lg-2" id="desktopNav">
+                    <ul class="navbar-nav align-items-center gap-3">
+                         <li class="nav-item"><a class="nav-link active" href="/BC91_Capstone1_FELandingPage/index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/BC91_Capstone1_FELandingPage/about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/BC91_Capstone1_FELandingPage/blog.html">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/BC91_Capstone1_FELandingPage/features.html">Features</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/BC91_Capstone1_FELandingPage/Howitwork.html">How It Works</a></li>
+
+                        <!-- Pages dropdown (desktop hover) -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="pagesDropdown"
+                                role="button" data-bs-toggle="dropdown">
+                                Pages
+                                <span class="custom-caret"></span>
+                            </a>
+                            <ul class="dropdown-menu shadow-sm" aria-labelledby="pagesDropdown">
+                                <li><a class="dropdown-item" href="#">Career</a></li>
+                                <li><a class="dropdown-item" href="#">Career Single</a></li>
+                                <li><a class="dropdown-item" href="#">Integrations</a></li>
+                                <li><a class="dropdown-item" href="#">Integration Single</a></li>
+                                <li><a class="dropdown-item" href="#">Pricing</a></li>
+                                <li><a class="dropdown-item" href="#">Changelogs</a></li>
+                                <li><a class="dropdown-item" href="#">Terms &amp; Conditions</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link" href="/BC91_Capstone1_FELandingPage/contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- CTA / Sign Up right -->
+                <div class="header-cta d-none d-lg-flex ms-auto order-lg-4">
+                    <a class="btn btn-cta btn-lg signup-btn" href="#">Sign Up Now</a>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Offcanvas mobile menu -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+            <div class="offcanvas-header border-0">
+                <a class="d-flex align-items-center" href="#">
+                    <img src="assets/img/icons/feature-shape.svg" alt="logo" style="width:34px;height:34px;">
+                    <span class="ms-2 fw-bold brand-text">Pinwheel</span>
+                </a>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body pt-0">
+                <nav class="mobile-nav">
+                    <ul class="list-unstyled">
+                        <li class="mobile-item"><a href="#" class="d-block">Home</a></li>
+                        <li class="mobile-item"><a href="#" class="d-block">About</a></li>
+                        <li class="mobile-item"><a href="#" class="d-block">Blog</a></li>
+                        <li class="mobile-item"><a href="#" class="d-block">Features</a></li>
+                        <li class="mobile-item"><a href="#" class="d-block">How It Works</a></li>
+
+                        <!-- Expandable Pages section -->
+                        <li class="mobile-item">
+                            <button
+                                class="btn w-100 text-start pages-toggle d-flex justify-content-between align-items-center"
+                                data-bs-toggle="collapse" data-bs-target="#mobilePages" aria-expanded="false">
+                                Pages
+                                <span class="chev">▾</span>
+                            </button>
+                            <div class="collapse mt-3" id="mobilePages">
+                                <ul class="list-unstyled mobile-sub ps-3">
+                                    <li><a href="#" class="d-block">Career</a></li>
+                                    <li><a href="#" class="d-block">Career Single</a></li>
+                                    <li><a href="#" class="d-block">Integrations</a></li>
+                                    <li><a href="#" class="d-block">Integration Single</a></li>
+                                    <li><a href="#" class="d-block">Pricing</a></li>
+                                    <li><a href="#" class="d-block">Changelogs</a></li>
+                                    <li><a href="#" class="d-block">Terms &amp; Conditions</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="mobile-item"><a href="#" class="d-block">Contact</a></li>
+                    </ul>
+
+                    <div class="mt-4 text-center">
+                        <a class="btn btn-cta w-75" href="#">Sign Up Now</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <section class="contact">
+        <div class="container">
+            <div class="text-center">
+                <ul
+                    class="breadcrumb bg-body-secondary px-4 py-2 rounded-pill d-inline-flex flex-nowrap align-items-center gap-2">
+                    <li class="leading-none text-dark">
+                        <a class="inline-flex items-center  text-decoration-none" href="#">
+                            <i class="fa-solid fa-house text-dark"></i>
+                            <span class="text-sm leading-none text-warning ">Home</span>
+                        </a>
+                    </li>
+                    <li class="leading-none text-dark">
+                        <span class="text-sm leading-none">/ Contact</span>
+                    </li>
+                </ul>
+                <div class="page-hero-content mx-auto text-center">
+                    <h1 class="mb-3 mt-8 display-4 fw-bold w-75 mx-auto">
+                        Get’n touch with Our Pinwheel team
+                    </h1>
+                </div>
+            </div>
+            <div class="row align-items-center  ">
+                <div class="col-md-6 ">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label fw-bold fs-5">Full Name</label>
+                        <input type="text" class="form-control py-3" id="exampleFormControlInput1"
+                            placeholder="Your Full Name">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label fw-bold fs-5">Email address</label>
+                        <input type="email" class="form-control py-3" id="exampleFormControlInput1"
+                            placeholder="You Email Address">
+                    </div>
+                    <label for="exampleFormControlInput1" class="form-label fw-bold fs-5">Reason/purpose</label>
+                    <select class="form-select form-select-lg mb-3" aria-label="Large select example">
+                        <option selected>select reason/purpose</option>
+                        <option value="1">Investment Plan</option>
+                        <option value="2">Investment Plan2</option>
+                        <option value="3">Investment Plan 3</option>
+                    </select>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label fw-bold fs-5">Message Here</label>
+                        <textarea class="form-control py-3" id="exampleFormControlTextarea1" rows="5"></textarea>
+                    </div>
+                    <a href="#"
+                        class=" page-gradient btn btn-light  btn-lg rounded-pill my-3 px-4 py-2 shadow">
+                        Download The Theme
+                    </a>
+
+                </div>
+                <div class="col-md-6">
+                    <img class="border rounded-3" src="/BC91_Capstone1_FELandingPage/assets/img/contact-img.png" alt="contact">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="row gy-4 my-5">
+                <div class="col-md-4">
+                    <h5 class="fw-bold">Pinwheel</h5>
+                    <p class="text-muted small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+
+                <div class="col-md-4">
+                    <h6>Quick Links</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-muted">About</a></li>
+                        <li><a href="#" class="text-muted">Category</a></li>
+                        <li><a href="#" class="text-muted">Testimonial</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <h6>Contact</h6>
+                    <p class="text-muted small">1234 Example Ave, City, Country</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+</body>
+    
+</html>
