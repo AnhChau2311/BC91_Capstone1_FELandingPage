@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Pinwheel - tailwind</title>
+    <link rel="shortcut icon" href="assets/img/favicon.png">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&display=swap" rel="stylesheet" />
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- CSS File -->
+    <link rel="stylesheet" href="assets/css/main.css">
+
+</head>
+
+<body>
+
+    <!-- HEADER / NAVBAR -->
+    <header class="site-header">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light p-0 align-items-center" aria-label="Main navigation">
+                <!-- Logo left -->
+                <a class="navbar-brand d-flex align-items-center me-0 me-lg-4" href="#">
+                    <img src="assets/img/logo.svg" alt="Pinwheel Logo" class="logo-icon">
+                </a>
+
+                <!-- Desktop nav (centered) + Toggler visible on md and below -->
+                <button class="navbar-toggler order-lg-3 ms-auto" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#mobileMenu" aria-controls="mobileMenu" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-center order-lg-2" id="desktopNav">
+                    <ul class="navbar-nav align-items-center gap-3">
+                        <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Blog</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">Features</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#">How It Works</a></li>
+
+                        <!-- Pages dropdown (desktop hover) -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="pagesDropdown"
+                                role="button" data-bs-toggle="dropdown">
+                                Pages
+                                <span class="custom-caret"></span>
+                            </a>
+                            <ul class="dropdown-menu shadow-sm" aria-labelledby="pagesDropdown">
+                                <li><a class="dropdown-item" href="#">Career</a></li>
+                                <li><a class="dropdown-item" href="#">Career Single</a></li>
+                                <li><a class="dropdown-item" href="#">Integrations</a></li>
+                                <li><a class="dropdown-item" href="#">Integration Single</a></li>
+                                <li><a class="dropdown-item" href="#">Pricing</a></li>
+                                <li><a class="dropdown-item" href="#">Changelogs</a></li>
+                                <li><a class="dropdown-item" href="#">Terms &amp; Conditions</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- CTA / Sign Up right -->
+                <div class="header-cta d-none d-lg-flex ms-auto order-lg-4">
+                    <a class="btn btn-cta btn-lg signup-btn" href="#">Sign Up Now</a>
+                </div>
+            </nav>
+        </div>
+
+        <!-- Offcanvas mobile menu -->
+        <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenuLabel">
+            <div class="offcanvas-header border-0">
+                <a class="d-flex align-items-center" href="#">
+                    <img src="assets/img/icons/feature-shape.svg" alt="logo" style="width:34px;height:34px;">
+                    <span class="ms-2 fw-bold brand-text">Pinwheel</span>
+                </a>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body pt-0">
+                <nav class="mobile-nav">
+                    <ul class="list-unstyled">
+                        <li class="mobile-item"><a href="#" class="d-block">Home</a></li>
+                        <li class="mobile-item"><a href="#" class="d-block">About</a></li>
+                        <li class="mobile-item"><a href="#" class="d-block">Blog</a></li>
+                        <li class="mobile-item"><a href="#" class="d-block">Features</a></li>
+                        <li class="mobile-item"><a href="#" class="d-block">How It Works</a></li>
+
+                        <!-- Expandable Pages section -->
+                        <li class="mobile-item">
+                            <button
+                                class="btn w-100 text-start pages-toggle d-flex justify-content-between align-items-center"
+                                data-bs-toggle="collapse" data-bs-target="#mobilePages" aria-expanded="false">
+                                Pages
+                                <span class="chev">▾</span>
+                            </button>
+                            <div class="collapse mt-3" id="mobilePages">
+                                <ul class="list-unstyled mobile-sub ps-3">
+                                    <li><a href="#" class="d-block">Career</a></li>
+                                    <li><a href="#" class="d-block">Career Single</a></li>
+                                    <li><a href="#" class="d-block">Integrations</a></li>
+                                    <li><a href="#" class="d-block">Integration Single</a></li>
+                                    <li><a href="#" class="d-block">Pricing</a></li>
+                                    <li><a href="#" class="d-block">Changelogs</a></li>
+                                    <li><a href="#" class="d-block">Terms &amp; Conditions</a></li>
+                                </ul>
+                            </div>
+                        </li>
+
+                        <li class="mobile-item"><a href="#" class="d-block">Contact</a></li>
+                    </ul>
+
+                    <div class="mt-4 text-center">
+                        <a class="btn btn-cta w-75" href="#">Sign Up Now</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- BANNER SECTION -->
+    <section class="banner-section">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-lg-6">
+                    <h1 class="banner-title">
+                        Scale design & dev operations with Avocode Enterprise
+                    </h1>
+
+                    <p class="banner-desc">
+                        A fully integrated suite of authentication & authorization products.
+                        Stytch’s platform removes the headache of.
+                    </p>
+
+                    <a href="#" class="btn-banner">Download The Theme</a>
+                </div>
+
+                <div class="col-lg-6 text-center">
+                    <img src="assets/img/banner-img.png" class="banner-image" alt="">
+                </div>
+
+            </div>
+        </div>
+
+        <img src="assets/img/banner-shape.svg" class="banner-shape" alt="">
+    </section>
+
+    <section class="features-section container">
+        <div class="row g-5">
+
+            <div class="features-header">
+                <div class="left">
+                    <h3 class="features-title">
+                        The Highlighting Part Of <br> Our Solution
+                    </h3>
+                </div>
+
+                <div class="right">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Morbi egestas Werat viverra id et aliquet. Vulputate egestas sollicitudin.
+                </div>
+            </div>
+            <!-- RIGHT EMPTY SPACE (để tạo bố cục giống bản gốc) -->
+            <div class="col-lg-7 d-none d-lg-block"></div>
+
+            <!-- FEATURE CARDS – Full width below -->
+            <div class="col-12 mt-2">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+
+                    <div class="col">
+                        <div class="feature-card">
+                            <img src="assets/img/icons/feature-icon-1.svg" alt="">
+                            <div>
+                                <h6>Live Caption</h6>
+                                <p>Short info</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="feature-card">
+                            <img src="assets/img/icons/feature-icon-2.svg" alt="">
+                            <div>
+                                <h6>Smart Reply</h6>
+                                <p>Short info</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="feature-card">
+                            <img src="assets/img/icons/feature-icon-3.svg" alt="">
+                            <div>
+                                <h6>Sound Amplifier</h6>
+                                <p>Short info</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="feature-card">
+                            <img src="assets/img/icons/feature-icon-4.svg" alt="">
+                            <div>
+                                <h6>Gesture Navigation</h6>
+                                <p>Short info</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="feature-card">
+                            <img src="assets/img/icons/feature-icon-5.svg" alt="">
+                            <div>
+                                <h6>Dark Theme</h6>
+                                <p>Short info</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="feature-card">
+                            <img src="assets/img/icons/feature-icon-6.svg" alt="">
+                            <div>
+                                <h6>Privacy Controls</h6>
+                                <p>Short info</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="feature-card">
+                            <img src="assets/img/icons/feature-icon-7.svg" alt="">
+                            <div>
+                                <h6>Location Controls</h6>
+                                <p>Short info</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col">
+                        <div class="feature-card">
+                            <img src="assets/img/icons/feature-icon-8.svg" alt="">
+                            <div>
+                                <h6>Security Updates</h6>
+                                <p>Short info</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <!-- PROMO / COLLAB -->
+    <section class="container mt-5">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="info-card p-4">
+                    <h4>Accept payments any country in this whole universe</h4>
+                    <p class="text-muted">Supporting more than 119 country world. Open transaction across more
+                        currencies.</p>
+                    <ul class="text-muted">
+                        <li>Supporting more than 119 countries</li>
+                        <li>Open transaction with more currencies</li>
+                        <li>Customer service with 79 languages</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-6 text-center">
+                <div class="info-card p-3">
+                    <img src="assets/img/banner-img.png" class="img-fluid rounded" alt="app preview">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACCOUNTABILITY + VIDEO -->
+    <section class="container mt-5">
+        <div class="row align-items-center gy-4">
+            <div class="col-lg-6">
+                <h4>Accountability that works for you</h4>
+                <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas...</p>
+                <a class="btn btn-outline-secondary" href="#">Know About Us</a>
+            </div>
+            <div class="col-lg-6 text-center">
+                <div class="position-relative" style="display:inline-block;">
+                    <img src="assets/img/banner-img.png" class="img-fluid rounded" alt="video preview"
+                        style="max-width:520px;">
+                    <a href="#" class="position-absolute" style="left:50%; top:50%; transform:translate(-50%,-50%);">
+                        <img src="assets/img/icons/play-icon.svg" alt="play" style="width:68px;height:68px;">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="container mt-5">
+        <h4 style="font-family:'Merriweather', serif;">Our customers have nice things to say about us</h4>
+        <p class="text-muted">Short intro about testimonials.</p>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+            <div class="col">
+                <div class="testimonial-card p-4">
+                    <img src="assets/img/users/user-2.png" class="avatar" alt="user avatar">
+                    <h6 class="mt-3">Bessie Cooper</h6>
+                    <small class="text-muted d-block">apple inc ltd</small>
+                    <p class="text-muted small mt-2">Our platform helps build secure onboarding...</p>
+                    <img src="assets/img/icons/star.svg" alt="rating" style="width:110px">
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="testimonial-card p-4">
+                    <img src="assets/img/users/user-5.png" class="avatar" alt="user avatar">
+                    <h6 class="mt-3">Courtney Henry</h6>
+                    <small class="text-muted d-block">microsoft corp</small>
+                    <p class="text-muted small mt-2">Our platform helps build secure onboarding...</p>
+                    <img src="assets/img/icons/star.svg" alt="rating" style="width:110px">
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="testimonial-card p-4">
+                    <img src="assets/img/users/user-6.png" class="avatar" alt="user avatar">
+                    <h6 class="mt-3">Ronald Richards</h6>
+                    <small class="text-muted d-block">meta limited</small>
+                    <p class="text-muted small mt-2">Our platform helps build secure onboarding...</p>
+                    <img src="assets/img/icons/star.svg" alt="rating" style="width:110px">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA STRIP -->
+    <section class="container mt-5">
+        <div class="cta-strip d-flex flex-column flex-md-row align-items-center justify-content-between gap-3">
+            <div>
+                <h3 style="font-family:'Merriweather', serif; margin-bottom:.25rem;">Helping teams in the world with
+                    focus</h3>
+                <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi egestas. Vestibulum.</p>
+            </div>
+            <div><a class="btn btn-light btn-sm" href="#">Download The Theme</a></div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="row gy-4">
+                <div class="col-md-4">
+                    <h5 class="fw-bold">Pinwheel</h5>
+                    <p class="text-muted small">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+
+                <div class="col-md-4">
+                    <h6>Quick Links</h6>
+                    <ul class="list-unstyled small">
+                        <li><a href="#" class="text-muted">About</a></li>
+                        <li><a href="#" class="text-muted">Category</a></li>
+                        <li><a href="#" class="text-muted">Testimonial</a></li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <h6>Contact</h6>
+                    <p class="text-muted small">1234 Example Ave, City, Country</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS (bundle includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+
+    <script>
+        // Sticky Header Effect
+        window.addEventListener("scroll", function () {
+            const header = document.querySelector(".site-header");
+            if (window.scrollY > 20) {
+                header.classList.add("scrolled");
+            } else {
+                header.classList.remove("scrolled");
+            }
+        });
+    </script>
+
+</body>
+
+</html>
